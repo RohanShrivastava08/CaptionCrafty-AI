@@ -6,7 +6,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'CaptionCraft AI',
+  title: 'Caption Crafty',
   description: 'AI-powered caption generation for your social media.',
 };
 

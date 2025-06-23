@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqData = [
     {
         question: "What kind of media can I upload?",
-        answer: "CaptionCraft AI supports both images (JPEG, PNG, WEBP) and video files (MP4, MOV). Our AI analyzes the visual content to generate relevant captions.",
+        answer: "Caption Crafty supports both images (JPEG, PNG, WEBP) and video files (MP4, MOV). Our AI analyzes the visual content to generate relevant captions.",
     },
     {
         question: "How does the AI generate captions?",

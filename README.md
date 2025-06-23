@@ -1,5 +1,4 @@
-
-# CaptionCraft AI 🚀
+# Caption Crafty 🚀
 
 <p align="center">
   <img src="https://img.freepik.com/free-vector/ai-powered-content-creation-isometric-concept-with-chatbot-laptop-screen-3d-vector-illustration_1284-82523.jpg" alt="AI powered content creation" width="400">
@@ -17,7 +16,7 @@
 
 ---
 
-**CaptionCraft AI** is a modern, full-stack web application built with Next.js that leverages the power of Google's Gemini generative AI to create high-quality, platform-specific content. Users can upload media or provide a text topic to generate engaging captions for social media platforms like Instagram, X, and LinkedIn, or even full-length blog posts.
+**Caption Crafty** is a modern, full-stack web application built with Next.js that leverages the power of Google's Gemini generative AI to create high-quality, platform-specific content. Users can upload media or provide a text topic to generate engaging captions for social media platforms like Instagram, X, and LinkedIn, or even full-length blog posts.
 
 ## Key Features
 
@@ -58,8 +57,8 @@ Follow these instructions to get a local copy of the project up and running.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-repo/captioncraft-ai.git
-    cd captioncraft-ai
+    git clone https://github.com/your-repo/caption-crafty.git
+    cd caption-crafty
     ```
 
 2.  **Set up environment variables:**

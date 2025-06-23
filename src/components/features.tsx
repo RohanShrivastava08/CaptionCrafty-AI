@@ -33,7 +33,7 @@ export function Features() {
         <div className="mb-12 text-center">
           <h2 className="font-headline text-3xl font-semibold md:text-5xl">The Ultimate Content Assistant</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            CaptionCraft AI provides everything you need to supercharge your social media workflow.
+            Caption Crafty provides everything you need to supercharge your social media workflow.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
