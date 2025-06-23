@@ -1,3 +1,4 @@
+
 import { CaptionGenerator } from '@/components/caption-generator';
 import { FAQ } from '@/components/faq';
 import { Features } from '@/components/features';
@@ -27,17 +28,13 @@ export default function Home() {
               <Link href="#generator">Try It Now</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="#showcase">See an Example</Link>
+              <Link href="#features">Learn More</Link>
             </Button>
           </div>
         </div>
       </section>
       
       <SocialProof />
-
-      <Features />
-
-      <Showcase />
 
       <section id="generator" className="w-full py-20 md:py-32">
         <div className="container mx-auto flex flex-col items-center gap-6 text-center">
@@ -48,6 +45,10 @@ export default function Home() {
         </div>
         <CaptionGenerator />
       </section>
+
+      <Features />
+
+      <Showcase />
 
       <FAQ />
     </div>
