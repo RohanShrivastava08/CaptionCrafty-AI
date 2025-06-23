@@ -20,10 +20,10 @@ export function Footer() {
             Terms
           </Link>
           <div className="flex items-center gap-2">
-            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Github">
+            <Link href="https://github.com/RohanShrivastava08" target="_blank" rel="noopener noreferrer" aria-label="Github">
                 <Github className="h-5 w-5 text-muted-foreground hover:text-primary" />
             </Link>
-            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <Link href="https://www.linkedin.com/in/rohan-shrivastava-887a15251/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary" />
             </Link>
           </div>
