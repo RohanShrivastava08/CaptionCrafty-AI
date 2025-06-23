@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 const images = [
-  { src: "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04", alt: "Social media post example 1", hint: "social media" },
+  { src: "https://img.freepik.com/free-vector/instagram-icon_1057-2227.jpg", alt: "Instagram logo", hint: "instagram logo" },
   { src: "https://images.unsplash.com/photo-1690138871282-b84c8bb4244d", alt: "Social media post example 2", hint: "app logo" },
   { src: "https://images.unsplash.com/photo-1705904506626-aba18263a2c7", alt: "Social media post example 3", hint: "youtube logo" },
   { src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1620649574571/wyHsbkt_U.png", alt: "Social media post example 4", hint: "hashnode logo" },
