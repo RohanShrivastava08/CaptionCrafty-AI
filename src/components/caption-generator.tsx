@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import type { GeneratePlatformOptimizedCaptionOutput } from '@/ai/flows/generate-caption';
 import { generatePlatformOptimizedCaption } from '@/ai/flows/generate-caption';
-import { AlertCircle, FileImage, Loader2, Sparkles, Wand2 } from 'lucide-react';
+import { AlertCircle, FileImage, Loader2, Wand2 } from 'lucide-react';
 import { Alert, AlertDescription, AlertTitle } from './ui/alert';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -73,22 +73,12 @@ export function CaptionGenerator() {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
-      <header className="text-center mb-10">
-        <h1 className="font-headline text-4xl sm:text-5xl font-bold text-primary flex items-center justify-center gap-3">
-          <Sparkles className="w-10 h-10" />
-          CaptionCraft AI
-        </h1>
-        <p className="mt-4 text-lg text-foreground/80 max-w-2xl mx-auto">
-          Upload your photo or reel, and let our AI craft the perfect, platform-optimized captions for you in seconds.
-        </p>
-      </header>
-
+    <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 mt-10">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
         <div className="lg:col-span-2 space-y-6">
           <Card>
             <CardHeader>
-              <CardTitle className="font-headline">1. Upload Media</CardTitle>
+              <CardTitle className="font-headline text-lg">1. Upload Media</CardTitle>
               <CardDescription>Drag & drop or select a file</CardDescription>
             </CardHeader>
             <CardContent>
@@ -98,7 +88,7 @@ export function CaptionGenerator() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="font-headline">2. Customize</CardTitle>
+              <CardTitle className="font-headline text-lg">2. Customize</CardTitle>
               <CardDescription>Tailor the AI to your needs</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -155,7 +145,7 @@ export function CaptionGenerator() {
         <div className="lg:col-span-3">
           <Card className="min-h-[600px] flex flex-col">
             <CardHeader>
-              <CardTitle className="font-headline">Your AI-Generated Captions</CardTitle>
+              <CardTitle className="font-headline text-lg">Your AI-Generated Captions</CardTitle>
               <CardDescription>Click to copy your favorite caption.</CardDescription>
             </CardHeader>
             <CardContent className="flex-grow">
