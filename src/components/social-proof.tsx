@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 
 const images = [
   { src: "https://img.freepik.com/free-vector/instagram-icon_1057-2227.jpg", alt: "Instagram logo", hint: "instagram logo" },
-  { src: "https://img.freepik.com/free-vector/letter-x-dry-brush-stroke-typography-vector_53876-177859.jpg", alt: "X social media logo", hint: "x logo" },
+  { src: "https://img.freepik.com/free-psd/social-media-logo-design_23-2151296981.jpg", alt: "X social media logo", hint: "x logo" },
   { src: "https://img.freepik.com/free-psd/social-media-logo-design_23-2151296989.jpg", alt: "Youtube social media logo", hint: "youtube logo" },
   { src: "https://img.freepik.com/free-vector/illustration-social-media-concept_53876-36932.jpg", alt: "Social media concept illustration", hint: "social media" },
   { src: "https://img.freepik.com/free-psd/social-media-logo-design_23-2151296991.jpg", alt: "LinkedIn social media logo", hint: "linkedin logo" },
@@ -11,20 +11,6 @@ const images = [
   { src: "https://placehold.co/400x600.png", alt: "Social media post example 7", hint: "city life" },
 ];
 
-const Marquee = ({ children, vertical = false, ...props }) => {
-  return (
-    <div
-      {...props}
-      className={cn("group flex gap-4 overflow-hidden p-4", {
-        "flex-col": vertical,
-        "flex-row": !vertical,
-      })}
-    >
-      {children}
-      {children}
-    </div>
-  );
-};
 
 export function SocialProof() {
   return (
@@ -38,20 +24,36 @@ export function SocialProof() {
         ></div>
         <div className="container mx-auto flex justify-center">
           <div className="relative w-full max-w-7xl [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
-            <Marquee className=" [--duration:60s] group-hover:[animation-play-state:paused]">
-              {images.map((image, index) => (
-                <div key={index} className="h-64 w-48 shrink-0">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={400}
-                    height={600}
-                    data-ai-hint={image.hint}
-                    className="h-full w-full rounded-xl object-cover"
-                  />
-                </div>
-              ))}
-            </Marquee>
+            <div className="group flex overflow-hidden p-4">
+              <div className="flex shrink-0 animate-marquee gap-4 motion-safe:group-hover:[animation-play-state:paused]">
+                {images.map((image, index) => (
+                  <div key={index} className="h-64 w-48 shrink-0">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={400}
+                      height={600}
+                      data-ai-hint={image.hint}
+                      className="h-full w-full rounded-xl object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div aria-hidden="true" className="flex shrink-0 animate-marquee gap-4 motion-safe:group-hover:[animation-play-state:paused]">
+                {images.map((image, index) => (
+                  <div key={index} className="h-64 w-48 shrink-0">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      width={400}
+                      height={600}
+                      data-ai-hint={image.hint}
+                      className="h-full w-full rounded-xl object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
