@@ -127,10 +127,10 @@ export function CaptionGenerator() {
               </div>
               <div>
                 <label className="text-sm font-medium">Theme (Optional)</label>
-                <Select value={theme} onValueChange={(v) => setTheme(v as Theme)}>
+                <Select value={theme} onValueChange={(v) => setTheme(v === 'none' ? '' : v as Theme)}>
                   <SelectTrigger><SelectValue placeholder="Select theme..." /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">None</SelectItem>
+                    <SelectItem value="none">None</SelectItem>
                     <SelectItem value="Travel">Travel</SelectItem>
                     <SelectItem value="Fitness">Fitness</SelectItem>
                     <SelectItem value="Fashion">Fashion</SelectItem>
