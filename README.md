@@ -1,4 +1,4 @@
-# Caption Crafty 🚀
+# CaptionCrafty AI 🚀
 
 <p align="center">
   <img src="https://img.freepik.com/free-vector/ai-powered-content-creation-isometric-concept-with-chatbot-laptop-screen-3d-vector-illustration_1284-82523.jpg" alt="AI powered content creation" width="400">
@@ -16,7 +16,7 @@
 
 ---
 
-**Caption Crafty** is a modern, full-stack web application built with Next.js that leverages the power of Google's Gemini generative AI to create high-quality, platform-specific content. Users can upload media or provide a text topic to generate engaging captions for social media platforms like Instagram, X, and LinkedIn, or even full-length blog posts.
+**CaptionCrafty AI** is a modern, full-stack web application built with Next.js that leverages the power of Google's Gemini generative AI to create high-quality, platform-specific content. Users can upload media or provide a text topic to generate engaging captions for social media platforms like Instagram, X, and LinkedIn, or even full-length blog posts.
 
 ## Key Features
 

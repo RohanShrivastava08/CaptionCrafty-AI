@@ -21,7 +21,7 @@ export default function Home() {
             Effortless AI Captions that<br /> <span className="text-primary">Engage & Convert</span>
           </h1>
           <p className="max-w-2xl text-lg text-muted-foreground">
-            Stop wasting hours on writer's block. Caption Crafty generates captivating, on-brand social media captions in seconds, tailored to any platform.
+            Stop wasting hours on writer's block. CaptionCrafty AI generates captivating, on-brand social media captions in seconds, tailored to any platform.
           </p>
           <div className="flex gap-4">
             <Button asChild size="lg">
