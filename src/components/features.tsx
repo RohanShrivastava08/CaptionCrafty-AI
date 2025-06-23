@@ -1,28 +1,28 @@
 "use client";
 
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Hash, PenSquare, Share2, Smile } from "lucide-react";
+import { BotMessageSquare, Settings2, SmilePlus, Zap } from "lucide-react";
 
 const features = [
   {
-    icon: <PenSquare className="w-8 h-8 text-primary" />,
-    title: "AI-Powered Captions",
-    description: "Generate creative and engaging captions in seconds with our advanced AI. Never run out of ideas again.",
+    icon: <Zap className="w-8 h-8 text-primary" />,
+    title: "Instant Creativity",
+    description: "Generate multiple engaging captions in seconds. Overcome writer's block and save precious time.",
   },
   {
-    icon: <Share2 className="w-8 h-8 text-primary" />,
-    title: "Platform Optimized",
-    description: "Get captions tailored for Instagram, LinkedIn, YouTube, and more, formatted for maximum impact on each platform.",
+    icon: <Settings2 className="w-8 h-8 text-primary" />,
+    title: "Fully Customizable",
+    description: "Tailor captions for any platform, tone, and theme. Get content that perfectly matches your brand voice.",
   },
   {
-    icon: <Smile className="w-8 h-8 text-primary" />,
-    title: "Mood & Tone Control",
-    description: "Choose from a variety of tones—professional, casual, funny, or trendy—to perfectly match your brand's voice.",
+    icon: <SmilePlus className="w-8 h-8 text-primary" />,
+    title: "Boost Engagement",
+    description: "Craft messages that resonate with your audience, complete with smart emojis and trending hashtags.",
   },
   {
-    icon: <Hash className="w-8 h-8 text-primary" />,
-    title: "Smart Hashtags",
-    description: "Automatically receive relevant and trending hashtags to increase your content's visibility and reach.",
+    icon: <BotMessageSquare className="w-8 h-8 text-primary" />,
+    title: "Advanced AI",
+    description: "Powered by cutting-edge generative AI to understand your media and deliver high-quality, relevant captions.",
   },
 ];
 
@@ -31,9 +31,9 @@ export function Features() {
     <section id="features" className="w-full py-20 md:py-32">
       <div className="container mx-auto max-w-5xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="font-headline text-3xl font-semibold md:text-5xl">Why Choose CaptionCraft?</h2>
+          <h2 className="font-headline text-3xl font-semibold md:text-5xl">The Ultimate Content Assistant</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Everything you need to supercharge your social media game.
+            CaptionCraft AI provides everything you need to supercharge your social media workflow.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">

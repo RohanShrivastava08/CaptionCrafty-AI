@@ -1,5 +1,7 @@
 import { CaptionGenerator } from '@/components/caption-generator';
+import { FAQ } from '@/components/faq';
 import { Features } from '@/components/features';
+import { Showcase } from '@/components/showcase';
 import { SocialProof } from '@/components/social-proof';
 import { Button } from '@/components/ui/button';
 import { Sparkles } from 'lucide-react';
@@ -15,17 +17,17 @@ export default function Home() {
             <span>Powered by Generative AI</span>
           </div>
           <h1 className="font-headline text-4xl font-semibold md:text-6xl">
-            Craft Perfect Social Captions <br /> in <span className="text-primary">Seconds</span>
+            Effortless AI Captions that<br /> <span className="text-primary">Engage & Convert</span>
           </h1>
           <p className="max-w-2xl text-lg text-muted-foreground">
-            Tired of staring at a blank screen? Let our AI generate engaging, platform-optimized captions that stop the scroll and boost your engagement.
+            Stop wasting hours on writer's block. CaptionCraft AI generates captivating, on-brand social media captions in seconds, tailored to any platform.
           </p>
           <div className="flex gap-4">
             <Button asChild size="lg">
-              <Link href="#generator">Start for Free</Link>
+              <Link href="#generator">Try It Now</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="#features">Learn More</Link>
+              <Link href="#showcase">See an Example</Link>
             </Button>
           </div>
         </div>
@@ -35,15 +37,19 @@ export default function Home() {
 
       <Features />
 
-      <section id="generator" className="w-full py-20 md:py-32 bg-secondary/50">
+      <Showcase />
+
+      <section id="generator" className="w-full py-20 md:py-32 bg-background">
         <div className="container mx-auto flex flex-col items-center gap-6 text-center">
-            <h2 className="font-headline text-3xl font-semibold md:text-5xl">Try It Yourself</h2>
+            <h2 className="font-headline text-3xl font-semibold md:text-5xl">Unleash Your Creativity</h2>
             <p className="max-w-xl text-lg text-muted-foreground">
-                Upload your media, pick your style, and watch the magic happen.
+              Upload your media, fine-tune the settings, and let our AI craft the perfect message for your audience.
             </p>
         </div>
         <CaptionGenerator />
       </section>
+
+      <FAQ />
     </div>
   );
 }
