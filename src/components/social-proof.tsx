@@ -2,11 +2,11 @@ import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 const images = [
-  { src: "https://placehold.co/400x600.png", alt: "Social media post example 1", hint: "travel blogger" },
-  { src: "https://placehold.co/400x600.png", alt: "Social media post example 2", hint: "fitness influencer" },
-  { src: "https://placehold.co/400x600.png", alt: "Social media post example 3", hint: "food photography" },
-  { src: "https://placehold.co/400x600.png", alt: "Social media post example 4", hint: "fashion model" },
-  { src: "https://placehold.co/400x600.png", alt: "Social media post example 5", hint: "tech gadget" },
+  { src: "https://images.unsplash.com/photo-1505156868547-9b49f4df4e04", alt: "Social media post example 1", hint: "social media" },
+  { src: "https://images.unsplash.com/photo-1690138871282-b84c8bb4244d", alt: "Social media post example 2", hint: "app logo" },
+  { src: "https://images.unsplash.com/photo-1705904506626-aba18263a2c7", alt: "Social media post example 3", hint: "youtube logo" },
+  { src: "https://images.unsplash.com/photo-1701534979355-7c03953bd1bd", alt: "Social media post example 4", hint: "hashnode logo" },
+  { src: "https://images.unsplash.com/photo-1611944212129-29977ae1398c", alt: "Social media post example 5", hint: "linkedin logo" },
   { src: "https://placehold.co/400x600.png", alt: "Social media post example 6", hint: "product photography" },
   { src: "https://placehold.co/400x600.png", alt: "Social media post example 7", hint: "city life" },
 ];

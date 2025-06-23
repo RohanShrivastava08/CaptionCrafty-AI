@@ -1,4 +1,4 @@
-import { Sparkles } from "lucide-react";
+import { Github, Linkedin, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
@@ -14,11 +14,19 @@ export function Footer() {
         </p>
         <div className="flex items-center gap-4">
           <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-            Privacy Policy
+            Privacy
           </Link>
           <Link href="#" className="text-sm text-muted-foreground hover:text-primary">
-            Terms of Service
+            Terms
           </Link>
+          <div className="flex items-center gap-2">
+            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="Github">
+                <Github className="h-5 w-5 text-muted-foreground hover:text-primary" />
+            </Link>
+            <Link href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary" />
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

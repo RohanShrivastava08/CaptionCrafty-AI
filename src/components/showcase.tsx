@@ -41,10 +41,11 @@ export function Showcase() {
                         <CardContent className="space-y-4">
                             <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden">
                                 <Image
-                                    src="https://placehold.co/800x600.png"
+                                    src="https://images.unsplash.com/photo-1619046339188-7256ecfb2185"
                                     alt="Cityscape at sunset"
-                                    layout="fill"
-                                    objectFit="cover"
+                                    width={800}
+                                    height={600}
+                                    className="object-cover w-full h-full"
                                     data-ai-hint="city sunset"
                                 />
                             </div>
