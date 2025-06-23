@@ -64,10 +64,10 @@ The user wants content for the '{{{platform}}}' platform.
 **CONTENT GENERATION LOGIC:**
 
 1.  **IF the platform is 'Blog':**
-    - Generate a single, well-structured, engaging blog post (around 3-4 paragraphs) based on the \`mediaContext\`.
+    - Generate a single, well-structured, engaging blog post based on the \`mediaContext\`.
     - The \`captions\` array in your output should contain exactly ONE object.
     - In that object, the \`headline\` field should be a compelling title for the blog post.
-    - The \`caption\` field should contain the full blog post formatted in Markdown (use headings, lists, bold text etc.).
+    - The \`caption\` field should contain the full blog post formatted in Markdown. The structure of the content (e.g., paragraphs or bullet points) must adhere to the user's requested '{{{outputFormat}}}'.
     - The \`hashtags\` field should contain 5-6 relevant keywords, separated by spaces (e.g., "#keyword1 #keyword2").
 
 2.  **IF the platform is NOT 'Blog' (e.g., Instagram, X, LinkedIn, YouTube):**
@@ -75,7 +75,7 @@ The user wants content for the '{{{platform}}}' platform.
     - Base your generation primarily on the \`photoDataUri\` if provided. If not, use the \`mediaContext\`.
     - Each generated caption object in the \`captions\` array must include:
         a. \`headline\`: A bold headline or hook (4–8 words).
-        b. \`caption\`: A well-written caption of two short paragraphs, formatted as a '{{{outputFormat}}}'.
+        b. \`caption\`: A well-written caption, formatted as requested in '{{{outputFormat}}}'.
         c. \`hashtags\`: 5–6 relevant and trending hashtags, separated by spaces.
     - Use emojis smartly and make the caption suitable for the target platform.
 
@@ -83,7 +83,7 @@ The user wants content for the '{{{platform}}}' platform.
 - Platform: {{{platform}}}
 - Tone (for social media): {{{moodTone}}}
 {{#if theme}}- Theme: {{{theme}}}{{/if}}
-- Output Format (for captions): {{{outputFormat}}}
+- Output Format: {{{outputFormat}}}
 {{#if mediaContext}}- Provided Topic/Context: {{{mediaContext}}}{{/if}}
 {{#if fileName}}- File Name: {{{fileName}}}{{/if}}
 - Attached Media: {{#if photoDataUri}}{{media url=photoDataUri}}{{else}}None{{/if}}`,

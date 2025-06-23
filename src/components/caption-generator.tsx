@@ -166,21 +166,21 @@ export function CaptionGenerator() {
                         </SelectContent>
                       </Select>
                     </div>
-                    <div className='sm:col-span-2'>
-                      <Label className="text-sm font-medium">Output Format</Label>
-                      <RadioGroup value={outputFormat} onValueChange={(v) => setOutputFormat(v as OutputFormat)} className="flex items-center gap-4 mt-2">
-                        <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="Paragraph" id="r1" />
-                            <Label htmlFor="r1">Paragraph</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <RadioGroupItem value="Bullet Points" id="r2" />
-                            <Label htmlFor="r2">Bullet Points</Label>
-                        </div>
-                      </RadioGroup>
-                    </div>
                   </>
                 )}
+                <div className='sm:col-span-2'>
+                  <Label className="text-sm font-medium">Output Format</Label>
+                  <RadioGroup value={outputFormat} onValueChange={(v) => setOutputFormat(v as OutputFormat)} className="flex items-center gap-4 mt-2">
+                    <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="Paragraph" id="r1" />
+                        <Label htmlFor="r1">Paragraph</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                        <RadioGroupItem value="Bullet Points" id="r2" />
+                        <Label htmlFor="r2">Bullet Points</Label>
+                    </div>
+                  </RadioGroup>
+                </div>
               </div>
             </div>
 
