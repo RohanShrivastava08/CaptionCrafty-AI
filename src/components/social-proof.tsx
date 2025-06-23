@@ -28,13 +28,13 @@ const Marquee = ({ children, vertical = false, ...props }) => {
 
 export function SocialProof() {
   return (
-    <section className="w-full bg-background py-10 md:py-20">
+    <section className="w-full py-10 md:py-20">
       <div className="relative">
         <div
-          className="pointer-events-none absolute -top-1 z-10 h-1/3 w-full bg-gradient-to-b from-background to-transparent"
+          className="pointer-events-none absolute -top-1 z-10 h-1/3 w-full bg-gradient-to-b from-transparent via-transparent to-transparent"
         ></div>
         <div
-          className="pointer-events-none absolute -bottom-1 z-10 h-1/3 w-full bg-gradient-to-t from-background to-transparent"
+          className="pointer-events-none absolute -bottom-1 z-10 h-1/3 w-full bg-gradient-to-t from-transparent via-transparent to-transparent"
         ></div>
         <div className="container mx-auto flex justify-center">
           <div className="relative w-full max-w-7xl [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">

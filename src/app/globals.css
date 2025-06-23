@@ -6,6 +6,10 @@
   :root {
     --background: 207 91% 94.7%;
     --foreground: 224 71.4% 4.1%;
+
+    --gradient-start: 220 50% 98%;
+    --gradient-end: 250 60% 98%;
+
     --card: 0 0% 100%;
     --card-foreground: 224 71.4% 4.1%;
     --popover: 0 0% 100%;
@@ -34,6 +38,10 @@
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+
+    --gradient-start: 222.2 84% 4.9%;
+    --gradient-end: 240 10% 10%;
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
@@ -64,7 +72,9 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+    background-attachment: fixed;
   }
   html {
     scroll-behavior: smooth;

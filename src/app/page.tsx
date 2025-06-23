@@ -10,7 +10,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="flex w-full flex-col items-center justify-start">
-      <section className="w-full bg-background">
+      <section className="w-full">
         <div className="container mx-auto flex max-w-5xl flex-col items-center justify-center gap-6 px-4 py-20 text-center md:py-32">
           <div className="flex items-center gap-2 rounded-full border bg-muted px-4 py-1.5 text-sm text-muted-foreground">
             <Sparkles className="h-4 w-4 text-primary" />
@@ -39,7 +39,7 @@ export default function Home() {
 
       <Showcase />
 
-      <section id="generator" className="w-full py-20 md:py-32 bg-background">
+      <section id="generator" className="w-full py-20 md:py-32">
         <div className="container mx-auto flex flex-col items-center gap-6 text-center">
             <h2 className="font-headline text-3xl font-semibold md:text-5xl">Unleash Your Creativity</h2>
             <p className="max-w-xl text-lg text-muted-foreground">

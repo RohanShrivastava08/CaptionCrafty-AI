@@ -14,17 +14,14 @@ import { Skeleton } from './ui/skeleton';
 import { CaptionCard } from './caption-card';
 import { FileUploader } from './file-uploader';
 import { useToast } from '@/hooks/use-toast';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Textarea } from './ui/textarea';
 
 type Platform = 'Instagram' | 'LinkedIn' | 'YouTube' | 'X' | 'Blog';
 type MoodTone = 'Professional' | 'Casual' | 'Funny' | 'Trendy';
 type Theme = 'Travel' | 'Fitness' | 'Fashion' | 'Tech' | 'Food';
 type OutputFormat = 'Paragraph' | 'Bullet Points';
-type InputType = 'media' | 'text';
 
 export function CaptionGenerator() {
-  const [inputType, setInputType] = useState<InputType>('media');
   const [file, setFile] = useState<File | null>(null);
   const [filePreview, setFilePreview] = useState<string | null>(null);
   const [mediaContext, setMediaContext] = useState('');
@@ -42,10 +39,19 @@ export function CaptionGenerator() {
   const handleFileSelect = (selectedFile: File) => {
     setFile(selectedFile);
     setFilePreview(URL.createObjectURL(selectedFile));
+    setMediaContext(''); // Clear text input when file is selected
     setCaptions(null);
     setError(null);
   };
   
+  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setMediaContext(e.target.value);
+    if (e.target.value) {
+        setFile(null); // Clear file input when text is entered
+        setFilePreview(null);
+    }
+  }
+
   const fileToDataUri = (file: File): Promise<string> =>
     new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -55,12 +61,8 @@ export function CaptionGenerator() {
     });
 
   const handleSubmit = async () => {
-    if (inputType === 'media' && !file) {
-      toast({ variant: 'destructive', title: 'No file selected', description: 'Please upload an image or video.' });
-      return;
-    }
-    if (inputType === 'text' && !mediaContext.trim()) {
-      toast({ variant: 'destructive', title: 'No text provided', description: 'Please describe your topic.' });
+    if (!file && !mediaContext.trim()) {
+      toast({ variant: 'destructive', title: 'No input provided', description: 'Please either upload an image or describe your topic.' });
       return;
     }
 
@@ -69,10 +71,10 @@ export function CaptionGenerator() {
     setCaptions(null);
 
     try {
-      const photoDataUri = inputType === 'media' && file ? await fileToDataUri(file) : undefined;
+      const photoDataUri = file ? await fileToDataUri(file) : undefined;
       const result = await generatePlatformOptimizedCaption({
         photoDataUri: photoDataUri,
-        mediaContext: inputType === 'text' ? mediaContext : undefined,
+        mediaContext: mediaContext.trim() ? mediaContext : undefined,
         platform,
         moodTone,
         theme: theme || undefined,
@@ -88,36 +90,38 @@ export function CaptionGenerator() {
     }
   };
   
-  const isSubmitDisabled = isLoading || (inputType === 'media' && !file) || (inputType === 'text' && !mediaContext.trim());
+  const isSubmitDisabled = isLoading || (!file && !mediaContext.trim());
 
   return (
     <div className="w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 mt-10">
-      <Card className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-border rounded-lg overflow-hidden">
+      <Card className="w-full bg-card/80 backdrop-blur-sm border-white/20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-border/50 rounded-lg overflow-hidden">
           
-          <div className="bg-card p-6 lg:p-8 space-y-6">
-            <Tabs value={inputType} onValueChange={(v) => setInputType(v as InputType)} className="w-full">
-                <TabsList className="grid w-full grid-cols-2">
-                    <TabsTrigger value="media"><FileImage className="mr-2" /> From Media</TabsTrigger>
-                    <TabsTrigger value="text"><Type className="mr-2" /> From Text</TabsTrigger>
-                </TabsList>
-                <TabsContent value="media" className="space-y-4 pt-4">
-                    <Label className="text-base font-medium">1. Upload Your Media</Label>
-                    <FileUploader onFileSelect={handleFileSelect} filePreview={filePreview} />
-                </TabsContent>
-                <TabsContent value="text" className="space-y-4 pt-4">
-                    <Label className="text-base font-medium">1. Describe Your Content</Label>
-                    <Textarea 
-                      placeholder="e.g., A blog post about the benefits of remote work..."
-                      className="min-h-[256px] text-base"
-                      value={mediaContext}
-                      onChange={(e) => setMediaContext(e.target.value)}
-                    />
-                </TabsContent>
-            </Tabs>
+          <div className="bg-transparent p-6 lg:p-8 space-y-6">
+            <div className="space-y-4">
+              <Label className="text-base font-medium flex items-center gap-2"><Type className="w-5 h-5" /> 1. Provide Content</Label>
+              <p className="text-sm text-muted-foreground">Start with a topic or upload your media below.</p>
+              <Textarea 
+                placeholder="e.g., A blog post about the benefits of remote work..."
+                className="min-h-[120px] text-base bg-background/50"
+                value={mediaContext}
+                onChange={handleTextChange}
+              />
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <div className="flex-grow h-px bg-border/50"></div>
+              <span className="text-muted-foreground font-medium text-sm">OR</span>
+              <div className="flex-grow h-px bg-border/50"></div>
+            </div>
+
+            <div className="space-y-4">
+              <Label className="text-base font-medium flex items-center gap-2"><FileImage className="w-5 h-5" /> 2. Upload Your Media</Label>
+              <FileUploader onFileSelect={handleFileSelect} filePreview={filePreview} />
+            </div>
 
             <div>
-              <Label className="text-base font-medium">2. Customize Your Output</Label>
+              <Label className="text-base font-medium">3. Customize Your Output</Label>
               <p className="text-sm text-muted-foreground mb-4">Tailor the AI to your specific needs</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="sm:col-span-2">
@@ -186,7 +190,7 @@ export function CaptionGenerator() {
             </Button>
           </div>
           
-          <div className="bg-background/80 dark:bg-secondary/20 p-6 lg:p-8 flex flex-col min-h-[500px] lg:min-h-[700px]">
+          <div className="bg-background/10 dark:bg-secondary/10 p-6 lg:p-8 flex flex-col min-h-[500px] lg:min-h-[700px]">
             <div className="flex-grow">
               <div className="space-y-4">
                 {isLoading ? (
