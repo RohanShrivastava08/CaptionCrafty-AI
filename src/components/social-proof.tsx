@@ -3,10 +3,10 @@ import { cn } from '@/lib/utils';
 
 const images = [
   { src: "https://img.freepik.com/free-vector/instagram-icon_1057-2227.jpg", alt: "Instagram logo", hint: "instagram logo" },
-  { src: "https://images.unsplash.com/photo-1690138871282-b84c8bb4244d", alt: "Social media post example 2", hint: "app logo" },
-  { src: "https://images.unsplash.com/photo-1705904506626-aba18263a2c7", alt: "Social media post example 3", hint: "youtube logo" },
-  { src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1620649574571/wyHsbkt_U.png", alt: "Social media post example 4", hint: "hashnode logo" },
-  { src: "https://images.unsplash.com/photo-1611944212129-29977ae1398c", alt: "Social media post example 5", hint: "linkedin logo" },
+  { src: "https://img.freepik.com/free-vector/letter-x-dry-brush-stroke-typography-vector_53876-177859.jpg", alt: "X social media logo", hint: "x logo" },
+  { src: "https://img.freepik.com/free-psd/social-media-logo-design_23-2151296989.jpg", alt: "Youtube social media logo", hint: "youtube logo" },
+  { src: "https://img.freepik.com/free-vector/illustration-social-media-concept_53876-36932.jpg", alt: "Social media concept illustration", hint: "social media" },
+  { src: "https://img.freepik.com/free-psd/social-media-logo-design_23-2151296991.jpg", alt: "LinkedIn social media logo", hint: "linkedin logo" },
   { src: "https://placehold.co/400x600.png", alt: "Social media post example 6", hint: "product photography" },
   { src: "https://placehold.co/400x600.png", alt: "Social media post example 7", hint: "city life" },
 ];
