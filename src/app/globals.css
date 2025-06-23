@@ -7,8 +7,9 @@
     --background: 207 91% 94.7%;
     --foreground: 224 71.4% 4.1%;
 
-    --gradient-start: 210 60% 98%;
-    --gradient-end: 220 70% 94%;
+    /* A classier, more vibrant gradient for the light theme */
+    --gradient-start: 210 60% 97%;
+    --gradient-end: 290 80% 97%;
 
     --card: 0 0% 100%;
     --card-foreground: 224 71.4% 4.1%;
@@ -39,8 +40,9 @@
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
-    --gradient-start: 222.2 84% 6%;
-    --gradient-end: 222.2 84% 2%;
+    /* An amazing, deep gradient for the dark theme */
+    --gradient-start: 222 47% 11%;
+    --gradient-end: 260 45% 10%;
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
