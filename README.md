@@ -178,11 +178,8 @@ Visit: http://localhost:9002
 | Blog Generator    | `generate-caption.ts` | Topic only    | Full blog content          |
 
 
-
-
-
-
 ## 📸 Screenshots
+
 
 
 
