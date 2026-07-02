@@ -4,6 +4,7 @@
   
 - It’s powered by Google Gemini through Firebase Genkit and wrapped in a sleek, modern UI using Next.js and ShadCN.
 
+
 ![Screenshot (276)](https://github.com/user-attachments/assets/7eed315e-a2d5-47a3-b7c4-6e2054bc9a26)
 
 ![Screenshot (277)](https://github.com/user-attachments/assets/378b80b7-24f0-4d28-ac24-aed597229039)
@@ -11,6 +12,7 @@
 ![Screenshot (278)](https://github.com/user-attachments/assets/d0368a08-d672-4d1a-86ba-f783f0788dc6)
 
 ![Screenshot (279)](https://github.com/user-attachments/assets/83f7305b-130f-4c7d-b143-ab5734fb0fa3)
+
 
 
 ## 📋 Table of Contents
